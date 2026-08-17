@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Living With Unfinished Love — Bharti</title>
+<meta name="description" content="Living With Unfinished Love — A journey through the echoes of a love that never found its ending. By Bharti.">
+<style>
+:root {
+  --navy:#07162f; --navy2:#0d2142; --cream:#f4ead8; --muted:#b9b4aa;
+  --line:rgba(244,234,216,.15); --card:rgba(255,255,255,.055);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 70% 0%,#183764 0,#07162f 42%,#040c1b 100%);color:var(--cream);font-family:Georgia,'Times New Roman',serif;line-height:1.85}
+a{color:inherit}
+.nav{position:sticky;top:0;z-index:20;background:rgba(4,12,27,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:15px;letter-spacing:.18em;text-transform:uppercase}
+.nav a{text-decoration:none;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.navlinks{display:flex;gap:22px;flex-wrap:wrap}
+.hero{min-height:88vh;display:grid;place-items:center;padding:80px 24px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,rgba(79,111,160,.22),transparent 42%)}
+.hero-content{position:relative;text-align:center;max-width:900px}
+.eyebrow{font-family:Arial,sans-serif;letter-spacing:.35em;text-transform:uppercase;font-size:11px;color:#c9c3b9}
+.hero h1{font-size:clamp(48px,9vw,108px);font-weight:400;line-height:.9;margin:24px 0 20px;letter-spacing:-.04em}
+.hero p{font-style:italic;font-size:clamp(17px,2vw,24px);color:#d0c8bb;max-width:700px;margin:0 auto 28px}
+.btn{display:inline-block;padding:13px 22px;border:1px solid rgba(244,234,216,.35);border-radius:999px;text-decoration:none;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:.25s}
+.btn:hover{background:var(--cream);color:var(--navy);transform:translateY(-2px)}
+.wrap{max-width:1100px;margin:auto;padding:0 24px}
+.intro{padding:100px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px}
+.label{font-family:Arial,sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+h2{font-weight:400;font-size:clamp(34px,5vw,58px);line-height:1.1;margin:10px 0 28px}
+.lead{font-size:20px;color:#e2d8c9}
+.reader{padding:80px 0}
+.reader-layout{display:grid;grid-template-columns:260px 1fr;gap:55px;align-items:start}
+.toc{position:sticky;top:85px;max-height:75vh;overflow:auto;padding:18px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+.toc strong{display:block;font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:11px;margin-bottom:12px}
+.toc a{display:block;padding:7px 0;text-decoration:none;color:#c9c3b9;font-size:13px;line-height:1.4}
+.toc a:hover{color:white}
+.chapter{padding:0 0 80px;margin-bottom:80px;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+.chapter-kicker{font-family:Arial,sans-serif;color:#8ea5c4;font-size:10px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px}
+.chapter h2{font-size:clamp(32px,4vw,52px);margin-bottom:28px}
+.chapter-text p{margin:0 0 20px;font-size:18px;color:#e1d8cb}
+.chapter-text p:first-child:first-letter{font-size:3.2em;float:left;line-height:.8;padding:.08em .1em 0 0;color:#fff}
+.quote{margin:45px 0;padding:34px 32px;border-left:2px solid #9aa9bc;background:rgba(255,255,255,.035);font-size:25px;font-style:italic;color:#eee4d5}
+.author{padding:100px 0;border-top:1px solid var(--line)}
+.footer{padding:60px 24px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-family:Arial,sans-serif;font-size:12px}
+.progress{position:fixed;left:0;top:0;height:3px;width:0;background:var(--cream);z-index:100}
+@media(max-width:800px){
+  .nav-inner{align-items:flex-start;flex-direction:column}
+  .navlinks{gap:12px}
+  .grid,.reader-layout{grid-template-columns:1fr}
+  .toc{position:relative;top:0;max-height:260px}
+  .chapter-text p{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Living With Unfinished Love</div>
+    <div class="navlinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#book">Read</a><a href="#author">Author</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">A book by Bharti</div>
+    <h1>Living With<br>Unfinished Love</h1>
+    <p>A journey through the echoes of a love that never found its ending.</p>
+    <a class="btn" href="#book">Start Reading</a>
+  </div>
+</header>
+
+<section class="intro" id="about">
+  <div class="wrap grid">
+    <div><div class="label">About the book</div></div>
+    <div>
+      <h2>Some stories remain unfinished.</h2>
+      <p class="lead">This website presents the complete written material from the supplied book document as a continuous, readable digital edition.</p>
+    </div>
+  </div>
+</section>
+
+<main class="reader" id="book">
+  <div class="wrap reader-layout">
+    <aside class="toc">
+      <strong>Contents</strong>
+      <a href="#section-1">UNFINISHED LOVE</a><a href="#section-2">ABOUT THE AUTHOR</a><a href="#section-3">I HOPE WE MEET AGAIN TOO..</a><a href="#section-4">THE HOPE</a><a href="#section-5">The Silence after him</a><a href="#section-6">THE ART OF WAITING</a><a href="#section-7">Living with Unfinished Love</a><a href="#section-8">Maybe in another lifetime</a><a href="#section-9">The place where I still Meet Him</a><a href="#section-10">Between My Heart and your Absence</a><a href="#section-11">The Difference Between &quot;Forever&quot; and &quot;Never&quot;</a><a href="#section-12">The weight of One-sided</a><a href="#section-13">Broken Dreams and changing realities</a><a href="#section-14">Accepting the Truth</a><a href="#section-15">The Beauty of Incomplete Stories</a><a href="#section-16">The final truth</a><a href="#section-17">&quot;Did I Fall in Love Alone ?&quot;</a><a href="#section-18">An UNKNOWN Beginning ~ ♡</a><a href="#section-19">From Ordinary to special ~ ♡</a><a href="#section-20">The Depth of Feelings ~ ♡</a><a href="#section-21">Habit Turned into Love ~ ♡</a><a href="#section-22">Silent Entry of Hopes ~ ♡</a><a href="#section-23">His Fear ~ ♡</a><a href="#section-24">The First Signs of Distance ~ ♡</a><a href="#section-25">Loving in Silence ~ ♡</a><a href="#section-26">The truth about Career ~ ♡</a><a href="#section-27">The Last Meeting ~ ♡</a><a href="#section-28">The Break 〰 ♡</a><a href="#section-29">The Noise of Silence 〰 ♡</a><a href="#section-30">The Battle with memories ~ ♡</a><a href="#section-31">Question Left Unspoken ~ ♡</a><a href="#section-32">Losing Oneself ~ ♡</a><a href="#section-33">The Silence of Breaking ~ ♡</a><a href="#section-34">Acceptance ~ ♡</a><a href="#section-35">Refusing to move on ~ ♡</a><a href="#section-36">His silence ~ ♡</a><a href="#section-37">Unfinished Love ~ ♡</a><a href="#section-38">After losing each other ~ ♡</a><a href="#section-39">The Final Truth ~ ♡</a><a href="#section-40">P1</a><a href="#section-41">Pt 2</a><a href="#section-42">Pt 1</a><a href="#section-43">Pt 2</a><a href="#section-44">The mind doesn&#x27;t need explanations.</a><a href="#section-45">Pt 3</a><a href="#section-46">The way I wanted it to be,</a><a href="#section-47">The Life We Could Have Lived</a><a href="#section-48">The Question</a><a href="#section-49">When We First Felt It</a><a href="#section-50">Careful Words</a><a href="#section-51">Silence</a><a href="#section-52">Almost</a><a href="#section-53">Fear Dressed as Strength</a><a href="#section-54">The Moment We Didn&#x27;t Choose</a><a href="#section-55">After you</a><a href="#section-56">What if</a><a href="#section-57">The life we imagined</a><a href="#section-58">Understanding</a><a href="#section-59">Enough</a><a href="#section-60">The Unsaid Words</a>
+    </aside>
+    <section>
+      
+      <article class="chapter" id="section-1">
+        <div class="chapter-kicker">Section 01</div>
+        <h2>UNFINISHED LOVE</h2>
+        <div class="chapter-text"><p>A journey through the echoes of a love that never found its ending.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-2">
+        <div class="chapter-kicker">Section 02</div>
+        <h2>ABOUT THE AUTHOR</h2>
+        <div class="chapter-text"><p>She never planned to become a writer. She simply had too many feelings and nowhere left to keep them.</p>
+<p>Through love , distance, silence, and unanswered questions, he became the reason this book was written.</p>
+<p>Every page of living with unfinished love is a quiet reflection of her own journey - of loving deeply , losing silently, and learning that some people leave without ever truly leaving our hearts. There was someone who unknowingly became the reason these words were written, but this book is not about him. It is about her waiting days, memories and her courage to turn heartbreak into something beautiful.</p>
+<p>This is her first book, written with honesty and the hope that her story will forever remind her how far she has come.</p>
+<p>There was once a person who changed my life without ever realizing it.</p>
+<p>He taught me what love felt like, but he also taught me how silence can hurt more than words. He was my safest place for a while, and then he became the hardest place to return to. I don&#x27;t write these pages to blame him or to ask him back. I write because he unknowingly gave me a story that my heart refused to forget.</p>
+<p>If these words ever find him, I hope he knows he was loved—truly, deeply, and without conditions. And even though our story remained unfinished, it became the beginning of the woman I am today.</p>
+<p>I saw him for the first time in college. Relationships have always given me pain, that is why I always ran away from relationships. So, as always, I tried my best to escape from him, but I don&#x27;t know why it did not happen this time.</p>
+<p>Like Bollywood movies, we started talking through our eyes, connected on social media, became friends, and then expressed our love. Everything was going well, but as they say, the evil eye always ruins everything.</p>
+<p>I experienced for the first time why a person is ready to lose everything in love.</p>
+<p>“After promises of spending a lifetime together, we both went our separate ways”. He probably forgot, he left, but I remained there in the same place, hoping for him, waiting for him, dreaming of moving forward with him. Yes, I know I am waiting for something that will never come, and that wait is still on... because I can&#x27;t forget him.</p>
+<p>because maybe I don&#x27;t want to forget him. It is not necessary that we should leave what we cannot get. Many times I think that I should forget him, but has anyone been able to forget their own self?</p>
+<p>I used to feel peace sitting next to him. For a moment, my face used to smile on seeing him. I love even waiting for him. How can I forget him?</p>
+<p>What is love if you forget it?</p>
+<p>“That&#x27;s why I collected every moment we spent together, those lovely memories, and kept them within myself.” There is no sign of his return; there is a wait that never ends.</p>
+<p>It is said that if one of the two people does not give up, God will bring them together again. It is said that stories are not meant to be incomplete; they are meant to be complete.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-3">
+        <div class="chapter-kicker">Section 03</div>
+        <h2>I HOPE WE MEET AGAIN TOO..</h2>
+        <div class="chapter-text"><p>I am waiting for the day when I will get my happiness again.</p>
+<p>People say, “Why that same person?”</p>
+<p>I ask, “Why not him?”</p>
+<p>He is the reason for my smile, the sparkle in my eyes, my dream, my reality, my life, my love, my everything.</p>
+<p>He is the only person who can remove my emptiness. He is the one who loved me despite my flaws, and even if he is a dream that can never come true.</p>
+<p>People say that I am crazy because, after knowing all these things, I am still choosing the same person every time.</p>
+<p>But this is love—knowing everything and still choosing the same person again and again, knowing that you will get nothing except pain, yet finding love even in that pain also.</p>
+<p>You know, everyone says that I should forget you now. You don&#x27;t even remember me, you don&#x27;t even care about me. But I feel like you will be back. The look in your eyes makes it seem like you are telling me to wait for you.</p>
+<p>Everyone says that you are unfaithful, but why don&#x27;t I believe it? Some say that you are not good for me, and I feel that there is no one better than you in this world for me.</p>
+<p>Many times people say that you will not come and I am wasting my time waiting for you, but I am making that time beautiful because that time is full of your thoughts.</p>
+<p>“When you are there, it feels like there is someone who knows me better than myself. Even after you are gone, why does it feel like there is something between us that brings me to you?”</p>
+<p>Sometimes I get tired and broken, but then I remember one thing — that I will never give up on you.</p>
+<p>Now, even my longings are waiting for your return. ( मेरे ख्वाबों को भी तुम्हारे वापस आने का इंतज़ार है। )</p>
+<p>I want to spend those moments with you once again. I want to live, not just laugh. I want to be truly happy. I want to move ahead, but with you, not without you.</p>
+<p>It seems like time is passing, but life has stopped. Those colors have disappeared from life; life has become colorless.</p>
+<p>I thought I would be able to handle myself if you left, but I realized the true meaning of love when I cried for you... when I had to handle myself alone.</p>
+<p>Because you were the person who knew me better than I knew myself, who used to make efforts for my happiness....</p>
+<p>The one whose breath would get stuck whenever something happened to me, who would laugh seeing me happy, who would find his own happiness in my happiness and a reason to get angry in my stubbornness.</p>
+<p>Sometimes I think how beautiful life would be if you were here. If you were here, I would laugh even while crying. I would overcome life&#x27;s biggest problems.</p>
+<p>“And perhaps those problems would not have existed because the feeling of sleeping on your lap and forgetting everything was much greater than those problems.”</p>
+<p>Holding your hand, looking at you with loving eyes, and me becoming carefree and forgetting everything — all this cannot be expressed in feelings.</p>
+<p>I don&#x27;t know how difficult life can be with you, but I want to live it only with you. And when I said, “I am yours,” that is what I meant.</p>
+<p>I have never run so much after anyone, but you have become my last wish. I don&#x27;t know whether it will ever be fulfilled or not, because I don&#x27;t want anyone better than you. Because you are enough for me.</p>
+<p>I want to do everything for you. It feels good to pray for you because, as they say, “when I am not able to reach you, I hope that my prayers will definitely reach you.”</p>
+<p>They say that people are selfish. Yes, they might be, but I know only this much—that where people ask for heaven for themselves, I have come there asking for you.</p>
+<p>And maybe, if the love is true, then a person does all this</p>
+<p>There are some people in my life who have never met you, who have never seen you but still they know your name.</p>
+<p>It is not easy for me to leave you and perhaps even more difficult to meet you. I can only preserve our story, our memories and perhaps the feelings we shared with each other.</p>
+<p>They say that a person deserves a second chance. I feel that we both complete each other somewhere. “Neither you nor I deserve a second chance. But maybe our story deserves a second chance.”</p>
+<p>&quot;Stories Deserve Second Chances</p>
+<p>Maybe Ours Too&quot;....</p>
+<p>It is said that sometimes people are right, if something goes wrong then it is due to time and circumstances.</p>
+<p>When I met you, love seemed like a common thing. Talking to you, spending time with you, laughing with you, it all felt like love....!</p>
+<p>After separation from you I realized that love is a feeling, it is a pain and in that pain too there is the sweetness of love, waiting is love.. losing yourself in someone&#x27;s memories is love. I don&#x27;t know whether you are in my destiny or not, but at the point where our relationship broke, you left my life but you remained inside me.</p>
+<p>Incomplete stories often get printed on the pages.... I don&#x27;t want to keep my love normal. I want to make our story better... give you, me and us a chance. I want to make my wish a reality. I want to complete the incomplete story.... I want to write our entire story on the pages.</p>
+<p>The incomplete stories are on every lips. I want to do something unique. I want to ask you for yourself from you.</p>
+<p>That&#x27;s why I stopped. Because I want to relive that feeling of love with you. They say that in love a person becomes a child. Yes, I want to live my childhood.</p>
+<p>When both aspects of the story are right, the time and circumstances are not right. It is our mistake that instead of changing the time and circumstances, we decided to leave each other. And now, I want to turn that time around. I want to fulfill the promise we made to spend our lives together.</p>
+<p>If life gives me something back, I will ask for you because nothing is more important than you.</p>
+<p>Even God gives a second chance, can&#x27;t we give each other a second chance?</p>
+<p>Some stories never end, they stop with time.</p>
+<p>They stop so that both aspects of the story can work on themselves to make the story better and to make themselves better. Our story seems to be one of these stories. I don&#x27;t know whether it has ended or not.</p>
+<p>Because our relationship is still the same for me. Some relationships need a good beginning; maybe our relationship also needs a similar beginning, a beginning to make the relationship better.</p>
+<p>I think you probably will, and maybe you are expecting the same from me. And I&#x27;m just waiting for the right time. I want us to meet each other again in our better versions, where we don&#x27;t repeat the same mistakes.</p>
+<p>And maybe we will meet too... because I don&#x27;t think this is the end of our story, there is still something left....!</p>
+<p>It is said that the longer the wait, the greater the blessing. Relationships never break, they just fade with time... Our relationship was not one of those relationships that break because we were connected to each other&#x27;s soul.</p>
+<p>If love is true, then there is no such thing as separation...... Many times people leave life but they remain in our hearts, and sometimes people go away but their memories, words and promises remain with us. But why our relationship seems different from all other relationships, even after breaking up, looking at each other with that loving gaze... looking at each other even in a crowd is not something everyone does.</p>
+<p>Our relationship has taught me how a person becomes your whole world, how his presence can make everything right, how you dream of living life with him. From dreaming, I have seen the journey of seeing those dreams shattered. I thought it was not easy for me.</p>
+<p>Everyone says second chances are scary. Don&#x27;t trust someone who leaves you once. But it is possible that after the second chance, it works better than the first one.</p>
+<p>The one for whom you prayed, tied threads on the Peepal tree, and kept fasts—you may get him with just one more effort of yours.</p>
+<p>Even after being broken up with a hundred times by the person you love, you still get a chance to meet him just because you love him.....</p>
+<p>You never meet the perfect person in LOVE relationship,</p>
+<p>But that imperfect relationship makes you perfect....</p>
+<p>“To make things better , a second start is needed, and a second start requires a second chance.....and this start and chance are needed especially in those relationships which you can neither forget nor move on from.”</p></div>
+      </article>
+    
+      <article class="chapter" id="section-4">
+        <div class="chapter-kicker">Section 04</div>
+        <h2>THE HOPE</h2>
+        <div class="chapter-text"><p>Some relationship start with love and trust and ends with hope and waiting. It is said that hope never die, they are right. People move on from life easily because we let them go for their happiness, because their happiness was more important for us but the hope of their return always remain. We wait for our hopes to become reality.</p>
+<p>And in the journey of hope, a person breaks down, begs many times, gets destroyed, but that hopes never end and I too have similar hope. Everyday I convince myself that the relationship I had with you is over, but everyday my heart finds a hope somewhere to stay connected with you. I go to sleep everyday with a sense of belonging but waking up every morning with a new hope of your return has become my habit.... Maybe it&#x27;s because I don&#x27;t know how to live without you, I don&#x27;t even want to.</p>
+<p>It&#x27;s true that the world is built on hope, because I&#x27;m spending my life in those hopes and waitings....!</p>
+<p>Well, it is so strange that even after so much happened, he hurts you, he makes you suffer alone, but still you hope for his return, why is this so??? Because perhaps we have found our home in them, our comfort. They’ve become the source of our joys and sorrows. We’ve become dependent on them for our life. We learned to live from them, they understood us and also makes us understand. We love them, we see them as a special one because maybe no one make us the feel the way they does and now , we and our hopes reminded behind... The heart is really a child , it brings a new excuse every day , it gives me new hope everyday to wait for you....!</p>
+<p>And there is a desire to look at him for hours and then there are these damned eyes which close as soon as you come in front of them.I think a time comes when we start running away from our love because we are afraid that those hopes will awaken, that love which we have suppressed for them will come to the fore, but ask yourself whether you really have no hopes from them, you really don&#x27;t wait for them to come back. So why are you stopped? Can a person really be dearer to us than our life, and if yes, then why does god leave the story incomplete? These questions roam in my heart and mind everyday , but the answer I get is only one thing , that is the hope of his return, the hope of doing everything right....!</p>
+<p>There is a normal conversation between me and my heart which happens every day. I say let him go, he has forgotten me and my heart says just one last try, don&#x27;t you see love for you in his eyes, if not then forget him and if you love him then make one last try And that series of last tries never ends...</p>
+<p>Maybe you are trying to holding   someone who is already gone.</p>
+<p>You are trying to hold on to someone who has long since left your life and is no longer with you. There is only one feeling of him with you which you feel everyday, the ways he taught you, the words he said and the habits he instilled in you which you do not want to leave. He is the kind of person who always lives in your silence, in your loneliness. You try to forget him every day, but forgetting him feels like forgetting yourself. Because he introduced you to yourself and now forgetting him feels like forgetting yourself. He gave a new direction to your life, but with his departure, that direction is also lost. Letting go is not that easy, but many times holding on is more difficult than letting go....</p>
+<p>Some relationships are not forever, they come to teach us something new and for memories, their marks remain permanently in our hearts, causing pain. And someone&#x27;s coming into our life and going away from our life is not random, Every person has a motive for coming into our life, which we also call God&#x27;s plan. Memories and stories always remain with us, reminding us time-to-time of that lost relationship.” We are so happy walking with some people that we do not even think about how we will return if we have to return alone.” But have you ever thought that if a person has already gone or has made up his mind to go, it is painful to hold him from one side for you and for him too..</p>
+<p>It’s better to get out of his life before you start feeling like a burden and dramatic. And then a fight will start which is the most difficult because that fight is with yourself, with your own heart, mind and soul. Because we go so away in that relationship that we forget ourselves and it becomes very difficult to convince yourselves that the other person is gone. We think we are very brave but every day we have to fight a new heartbreak and then we understand what that person meant to us. And we let him go, how stupid isn’t it? Knowing everything that I am nothing without him, I am incomplete without him, I will not be able to live, I will not be able to do without him, still I let him go because it was necessary to let him go.</p>
+<p>Because the light in his eyes was more precious than my happiness. His smile was more important than my happiness; it was better to set him free than to tie him in a meaningless relationship. That delicate little boy, his smile was beautiful, so perhaps I let him go. He wanted to fly in the sky, and I love his freedom , so perhaps I let him go.</p>
+<p>If this is called sacrificing in love, then I sacrificed myself  for it.</p>
+<p>Pulling relationships creates cracks in them, so before it becomes a burden, I will stay away from him and maybe letting go is also love. Many times, in an attempt to get a person, we fight with them, we make efforts, but have we ever noticed that the more we run in the race to get them, the further they move away from us.</p>
+<p>Complications begin to mount in the relationship. Therefore, it&#x27;s more difficult to hold on to them. Instead of fighting and ending the relationship it&#x27;s better to be a memory for them and let them go happily.</p>
+<p>So I wrote about these things —</p>
+<p>अपनी खुशी से ज्यादा मुझे उसकी हँसी प्यारी थी,</p>
+<p>जाने देना कभी मकसद था ही नहीं,मुझे उसके साथ एक उम्र बितानी थी,</p>
+<p>एक तरफ उसने मुझसे पूछा की रह तो लेती होगी ना तुम मेरे बिना,</p>
+<p>मैने हस के कहा - हाँ, अब जीना सीख गई हूँ,</p>
+<p>और दूसरी तरफ उसको भुलाने की एक नाकाम कोशिश,जो अभी भी जारी थी।</p>
+<p>It is said that let go of that story which is impossible to bring to an end.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-5">
+        <div class="chapter-kicker">Section 05</div>
+        <h2>The Silence after him</h2>
+        <div class="chapter-text"><p>Some memories refuse to leave. They sit quietly in the corners of your heart whispering of love long gone.</p>
+<p>After a person leaves, only a silence remains behind — and within that silence the live memories of that person. Memories that sometimes makes you cry, sometimes hurt deeply and sometimes completely break you. Because that relationship came into your life at a time when you had already made that person your everything and the goodbye happened at a moment when you least expected it. A person who was once cheerful, always smiling, living with a childlike innocence and finding happiness in small moments began to live in solitude. Not because there was no one around, but because the one they loved the most had left their life. What remained were only memories – memories that punished them every single day.</p>
+<p>That silence breaks a person up to a certain point, but slowly, the same silence teaches them how to heal. After that one person left, you made silence your home — and that isn&#x27;t easy, is it? It wasn&#x27;t easy for me either. That silence slowly destroys a person from within, kills them and completely changes someone who was once happy and full of life. Expecting anything from people always brings pain, so they learn to live, walk and survive alone. They say that with time everything gets better, but that&#x27;s not really true. A person simply learns how to live with the pain. That&#x27;s why, in that silence, they begin to search for themselves.</p>
+<p>Some relationships start with words and end in silence. They give you happiness in the beginning, but in the end, only silence remains — you, the things they once said, the memories, the promises and that quietness which never lets you feel truly alone, but makes you die a little every moment in their memory.</p>
+<p>But the truth is that an ending is never truly complete; it simply takes on a new form—one such silence that does not speak, yet says so much without words. In that moment, the pain does not make noise; it becomes a person&#x27;s quietness. It teaches us that not every pain needs words. Earlier, in every silent moment, their memories would return—their laughter, their anger, their habits. Everything felt as if even the memories knew there was no one left to speak to, so they knocked harder, like a stronger wind...</p>
+<p>But slowly , a person learns that some memories cannot be chased away ; they can only be endured.</p>
+<p>People say that with time one forgets, stops loving - but that&#x27;s not true.</p>
+<p>A person simply gets tired, and that&#x27;s why they stop showing, telling and speaking....</p>
+<p>“We being to live by suppressing our feelings and our love. keeping their memories within our silence, we often meet them there – alone.”</p>
+<p>मैं चुप बैठ के अपना सब्र आजमाऊँगी,</p>
+<p>उसके मुझे देखते ही एक बार फिर अपनी नज़रें झुकाऊँगी,</p>
+<p>चाहत तो आज भी बहुत है उसके लिए दिल में,</p>
+<p>मगर यह उसे ना जताऊँगी,</p>
+<p>हाँ, सच है नहीं रह पाती मैं उसके बिना</p>
+<p>पर यह उसे अब ना बताऊँगी,</p>
+<p>और सच कहूँ,</p>
+<p>अपना सब कुछ हार के भी आएगा ना</p>
+<p>मैं तब भी उसे अपनाऊँगी ।</p>
+<p>Mein tere bina kakh vi nhi,</p>
+<p>Mull paake vekh leya mein Heereyan da,</p>
+<p>par tere agge ohna di keemat lakh vi nhi,</p>
+<p>Injh lagda ae tu hun vi kol ae mere,</p>
+<p>bichode ton baad bhi hoye appan ik duje ton wakh vi nhi,</p>
+<p>Kade-Kade lagda ae tu sirf mera ae,</p>
+<p>te kade jivein mera tere te ik hak vi nhi...</p>
+<p>Some stories don&#x27;t break, they wait. Time didn&#x27;t erase us, it only tested how much we meant. If love can survive absence, it can survive fear too. Maybe our ending was never written—Only delayed, Waiting for braver versions of us.</p>
+<p>Some stories deserve second chances—Not because they were perfect, but because they were real. Maybe ours was paused, not ended. Maybe the silence was just a comma, Not a full stop. If hearts can learn, If time can soften sharp edges, then maybe...Our story still has a few pages left to turn.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-6">
+        <div class="chapter-kicker">Section 06</div>
+        <h2>THE ART OF WAITING</h2>
+        <div class="chapter-text"><p>They say everyone can fall in love, but not everyone is capable of waiting. True love is that where, even after losing someone, there is still hope and patience for their return. Waiting for someone to come back who has already left your life, yet even today our waiting for them remains unchanged. The relationship has ended, but the waiting has not. A person whom you are perhaps destined to have, and yet losing or forgetting them is not acceptable to you —Still, you wait. yes, because this is love. On this journey of waiting, you break a thousand times, yet your waiting never comes to an end.</p>
+<p>They say that waiting for someone dear, someone you love is one of those experiences in life that is very difficult to put into words, and feeling it is even deeper.</p>
+<p>On this journey, the mind questions itself every moment, the heart swings between fear and hope, and time seems to move deliberately slowly. When we wait for someone dear to us, every day begins with the same thought—maybe today—and every night ends with an incomplete thought—maybe tomorrow. And in these maybes we begin to pass our days. Life feels as if it is merely being endured; you are not really living it. Because for the one we consider our own, we are willing to stop and pause.</p>
+<p>While waiting for someone dear, the morning sunlight feels different, and the evenings seem to grow longer because there is no one to talk to. “Nights become even more difficult, because in that darkness, their memories begin to make even more noise.” This is what love truly is. Sometimes, living in memories brings more peace than facing the truth. The moment a phone notification rings, the heart starts beating faster.</p>
+<p>An unknown call awakens hope, but not seeing their name brings silence once again. This waiting teaches us patience, but it is not easy, because every person has a limit that is often tested through anger, exhaustion and breaking down. Each time, the act of waiting tests that limit again and again.</p>
+<p>Sometimes we ask ourselves whether our waiting is justified — whether the person we are waiting for remembers us too, or whether it is only us carrying the weight of emotions. But the heart does not settle on any answer, because in love, logic always loses. The most difficult moments of this waiting are when we begin to feel that perhaps our wait could be endless, that there may be no end date for it....No promises of their return. Yet, we stopped.</p>
+<p>“This waiting is not just the hope of someone&#x27;s return, but also an effort to protect ourselves from breaking apart. Sometimes the waiting never ends; we simply learn to live with it.”</p>
+<p>की मेरा प्यार मुझे किस राह पर लाया है,</p>
+<p>जिसे भूल जाने का दिखावा करती हूँ सारा दिन,</p>
+<p>उसी की यादों ने मुझे सताया है</p>
+<p>जिसके साथ जिंदगी जीनी थी मुझे,</p>
+<p>उसी ने मुझे दूरियों का एहसास कराया है</p>
+<p>ईश्क तो एक तरफ से होता है,</p>
+<p>जो दोनों तरफ से हो उसे किस्मत कहते हैं,</p>
+<p>यह मुझे उसने समझाया है</p>
+<p>और बहुत करीब चली ही गई थी मैं उसके</p>
+<p>नींद टूटी तो पता चला,</p>
+<p>वो सपनों में भी मेरे जख्मों को कुरेदने आया है</p></div>
+      </article>
+    
+      <article class="chapter" id="section-7">
+        <div class="chapter-kicker">Section 07</div>
+        <h2>Living with Unfinished Love</h2>
+        <div class="chapter-text"><p>They say that staying devoted to one person, and remaining theirs even after they are gone, is not something everyone can do. Everyone can fall in love, but not everyone can wait. Anyone can confess their love, but not everyone can turn it into devotion. It is easy to stay loyal while someone is still with you, but to remain only theirs even after they have left — that is difficult. Everyone tells me, &quot;You&#x27;ll find many others,&quot; but who wants to search for many? I want the one to whom I belong. People compare their loved one with someone else so easily... how do I explain to them that my love is such that there is no one like him, and maybe there never will be.</p>
+<p>And shame on my love, if I ever try to look for him in someone else. Was your choice really so common that I would find it in everyone?</p>
+<p>Love is when, even with the whole world around you, you still ache for that one person alone. That is the kind of feeling of love I experienced after meeting ‘him’—after that, I stopped searching, but I could never stop asking for him in my prayers. After that, I never felt that moving on was the right thing, because I had loved truly. I never wanted him to become mine; after him, I only started looking for flaws within myself. I never looked at any other man because it feels as if I would be cheating on him. Yes, I know he is no longer with me, but my promises of loyalty, our conversations, everything still lives in my memory even today.</p>
+<p>Some connections do not end with closure; they end by settling deep within us, shaping who we become. Not moving on does not mean being stuck in the past — it means carrying the past with dignity. It is waking up each day knowing that the person is no longer part of your present, yet refusing to turn your feelings into something casual or forgettable. In a world that constantly pushes us to heal fast and love again quickly, choosing not to move on becomes an act of resistance, a way of saying that some bonds are too rare to be repeated. Not moving on is also about loyalty — to memories, to promises once spoken, and to the version of yourself that loved sincerely. It is choosing solitude over shallow Connections, depth over distraction.</p>
+<p>You stop searching for the same feeling in new faces because you know love is not transferable; it cannot be copied or recreated in someone else. There is pain in this choice, yes, but there is also peace. The peace of knowing you did not betray your emotions, that you did not rush your healing just to fit into society’s idea of “normal”. The art of not moving on teaches patience, emotional honesty, and the courage to live with longing without letting it destroy you. It is to accept that some bonds are meant to stay incomplete yet meaningful. Living with unfinished love is not about clinging to the past; it is about honoring a connection that changed you, even if it never stayed.</p>
+<p>Living with unfinished love means learning how to breathe in the space where answers never arrived and endings were never clearly written. Unfinished love does not fade with time; it simply changes its place within you, moving from longing to memory, from ache to acceptance. You learn to smile in public while privately holding conversations that will never be spoken aloud. There are moments when the past returns gently — through a familiar laugh, a place once shared, a song you listened together and a thought that appears uninvited — and instead of resisting it, you let it pass through you. Living with unfinished love is about allowing it to shape your understanding of love while still continuing to live, grow and exist with quite strength.</p>
+<p>“Staying loyal to the one who is gone is not about refusing life or denying the present; it is about honoring a love that shaped your soul. It is choosing to carry someone quietly within you, even when the world expects you to replace them, forget them or outgrow them. Loyalty, in the sense, is not loud or dramatic — it lives in small, invisible acts: in the way you still think of them before sleeping, in the way certain songs pause your breath. They are gone, yet they remain in your choices, your silences, your becoming.”</p></div>
+      </article>
+    
+      <article class="chapter" id="section-8">
+        <div class="chapter-kicker">Section 08</div>
+        <h2>Maybe in another lifetime</h2>
+        <div class="chapter-text"><p>Maybe in another lifetime, you will be mine — this sentence is not a hope, but the final pause of an unfinished story that I repeat quietly within myself everyday. It is the acceptance of a love that could not be completed, because of time, circumstances and fear, yet whose truth still lives in every breath I take. In this lifetime, we met, conversations flowed like rivers, silences spoke just as deeply, eyes made promises, and hearts trusted without conditions. But fate, perhaps, had written a different script for us. That is why we were close, yet never truly together. Sometimes it feels as though the deepest form of love is the one that holds no ownership and no expectations — only acceptance. Acceptance that you should be happy, even if that happiness does not include me. Acceptance that your smile should not depend on my presence. Acceptance that I could not hold on to you, yet I learned how to love you even after losing you.</p>
+<p>In this life, what we gained were moments — some bright, some blurred — and what we lost was a future. Still, the light of those moments continues to guide me through my darker days. The time I spent with you exists like a collection of photographs in my memory, untouched by the yellowing effect of time. In every picture, there is the same simplicity, the same warmth, the same unspoken promise that if circumstances had been kinder, if the world had been a little less rigid, our story might have ended differently. But life taught me that not every love is meant to be complete. Some loves become eternal precisely because they remain unfinished. They do not break us; instead, they shape us from within. Even now, when I walk down the paths where your laughter once echoed, I realize that memories are not burdens — they are bridges between the past and the present, between desire and acceptance.</p>
+<p>There are nights when silence grows heavy and my heart fills with questions whose answers seem to be reserved for another lifetime. In those moments, I find comfort in the thought that love does not mean staying together, Sometimes it also means letting someone go freely. You are the chapter of my life that I refuse to close, because some pages preserve their fragrance only when they&#x27;re left open. What we could not have in this lifetime may come easily in another — where time will be our ally, fear will not block our path, and the noise of the world will be softer than the beating of our hearts. In that place, we will recognize each other without words, and hold on without conditions. There will be no &quot;if&quot; and no &quot;what if&quot; — only a quiet, honest, complete &quot;now&quot;. Maybe in another lifetime, you will be mine — this thought is not a dream I chase anymore, but a quite peace I have learned to live with....</p>
+<p>Some people enter our lives not to stay, but to teach us how to hold love gently. They do not promise permanence, yet they carve a permanent place within us. In this lifetime, you were never truly mine, and still your presence reshaped the way I feel, think and love. I learned how to stop feeling you. you live in every &quot;what if,&quot; in every unspoken thought, in every silence where words surrender. This love never asked for ownership, and perhaps that is why I eventually learned how to let it go. Our story had few meetings, but a lasting impact. You arrived like a pause — brief, yet deep enough to change the rhythm of my life I now understand that not every love is meant to be completed; some are meant to transform us instead.</p>
+<p>In this lifetime, you were not my destiny, but you became my truth. And maybe that is the purest form of love - where even the pain of not being together turns into dignity rather than regret.</p>
+<p>Here, in this lifetime, I have found you even after losing you—within myself. I carry you in the lessons you taught me, in your kindness, and in your simplicity. You showed me that love does not demand, it gives; that waiting is not weakness but courage; and that even the pain of not being able to claim someone can make us more human.&quot;</p>
+<p>I know our paths have separated, but emotions have a way of creating their own paths. They settle silently in the corners of the heart and remind us, from time-to-time, that what we felt was real. And that is enough. Because love is not proven by its ending, but by its impact—the impact that makes us gentler, more honest, and more alive.</p>
+<p>“If there is another lifetime, one where time is kinder and circumstances do not speak louder than the heart, I would choose you again. Without fear, without conditions, without worrying about how it might end.” There, perhaps, we would not say &quot;maybe&quot; we would simply hold each other and stay. But in this life, I set you free in my prayers, because true love is the courage to release someone without loving them less. And with that faith, I move forward — believing that what remained unfinished here will find us or its wholeness somewhere else, in another lifetime. Maybe in another lifetime, you will be mine. There is no complaint hidden in this thought, no bitterness — only a quiet faith that the universe knows how to complete our story somewhere, sometime. Until then, in this lifetime, I wish for your happiness, I protect your dreams in my prayers, and I hold my share of love with dignity and silence. Some loves do not make noise; they burn quietly, like a lamp within the soul — guiding the way, offering warmth, and never fearing the darkness. If you ever think of me, know that I will smile too, because memories do not always hurt; sometimes they simply remind us that we once lived with an open heart. And if i ever find myself alone, I will steady myself with the belief that perhaps in another lifetime, on another morning or another evening, when time finally stands on our side, you will be mine — completely, truthfully and forever.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-9">
+        <div class="chapter-kicker">Section 09</div>
+        <h2>The place where I still Meet Him</h2>
+        <div class="chapter-text"><p>I met him in my imagination. That meeting did not depend on time, place or circumstances. There was no date, no ticking clock, no boundaries of the real world. It happened in that quiet corner of the mind where memories, desires, and unfinished conversations breathe silently. That world of imagination was very still, yet even in that stillness, there was the presence of him. The moment I closed my eyes, he was there — not as the world had seen him, but as my heart had always imagined him to be. In that space, he was not trapped in any role, nor bound by any responsibility. He was simply him — whole, honest, and free from fear.</p>
+<p>Meeting him in my imagination felt more alive than reality itself because there was no hesitation there. All the words that had remained unspoken in real life, all the feelings that never found a voice, flowed effortlessly in my imagination. There was no &quot;if&quot;, no &quot;maybe&quot;, no &quot;it could have been&quot;. There was only &quot;this is&quot;. In my imagination, he smiled, and that smile did not carry the exhaustion I had seen in real life. His eyes were free from the dust of time; they held only stillness, as if he too wanted to remain in that moment forever, just like me. Meeting him there did not feel like a dream; it felt like a truth – a truth the world never acknowledged, but my soul lived with complete honesty. In that space, we understood each other even without words. Language was unnecessary, because emotions themselves became the language. I asked him questions I had never dared to ask out loud, and he answered them as if he had always known what was hidden within me. That was the magic of imagination - it is the only place where nothing remained unfinished....</p>
+<p>In that imagined world, he sat beside me, and we shared silence. That silence was not heavy; it was comforting. In real life, silence often becomes distance, but in my imagination, the same silence turned into a bridge between two hearts. I complained to him, I expressed my anger, my hurt and he listened. He did not defend himself, nor did he offer excuses. In my imagination he had endless patience, because there was no fear of losing me there.</p>
+<p>I knew that meeting him was only happening in my imagination, yet its impact was completely real. Everytime I returned from that meeting, my heart felt lighter, as if someone had gently opened a door that had been locked inside me for too long. In my imagination, he taught me that some relationships become eternal not by being complete, but by remaining incomplete. That not every story needs an ending — some stories are meant to exist only as feelings. In my imagination, he never left. He stayed there, in that place where memories are kept safe. Whenever the world became too loud, whenever people asked questions, whenever I was advised to &quot;move on&quot;, I returned to him in my imagination. That place was my private refuge, where on one called me weak...  Staying there was not a sign of defeat ; it was simply my way of being honest with myself....</p>
+<p>Meeting him in my imagination taught me that love is not always about possesion. Sometimes, love is only about feeling — without ownership, without promises of a future. He was not a part of my life, but he was the center of my imagination. And perhaps that is why, he felt so alive there. Reality creates limits, but imagination erases them. Slowly, I accepted that meeting him in my imagination was not an illusion. It was a truth of my inner world. It was the form of love that refuses to surrender to time, distance or circumstances. The world may call it &quot;imagination&quot;, but for me , it is a meeting - everytime new ,  everytime just as deep.</p>
+<p>“I meet him in my imagination, because that is where he meets me completely. And there, I do not feel incomplete either. Perhaps that is the purpose of some meetings – to remind us that we are capable of feeling deeply, honestly, and without conditions. That meeting, born in imagination, is one of the truest meetings of my life, because even if it was not real, it made me real.”</p>
+<p>बिछड़ने के बाद नजरें कैसे मिलाते हैं,मैंने सीखा ही नहीं,</p>
+<p>कल शाम वो मेरे सामने से गुजरा,मैं उसे देखा ही नहीं।</p>
+<p>Tere dil se nikle hein ab baaki duniya</p>
+<p>dekhenge,</p>
+<p>Tujhko toh hum dekh chuke Tujhse</p>
+<p>acha dekhenge,</p>
+<p>Aur ek nujuumii (Future Teller) bol rha</p>
+<p>tha aage ka hai waqt bura,</p>
+<p>Ab tujhko jaata dekh lia aur bura kya</p>
+<p>Dekhenge.</p>
+<p>मुझे तुम्हारी कही हर-एक बात याद है,</p>
+<p>तेरे रूठ जाने के बाद तुझे मनाने के लिए                 की हर-एक मुलाकात याद है,</p>
+<p>और साथ निभाने से जिंदगी साथ गुजारने       की हर-एक बात याद है,</p>
+<p>और लोग कहते हैं दो ही महीने तो थे</p>
+<p>अब उन्हें कैसे समझाऊँ की वो शख्स मेरे लिए कितना खास है ।</p></div>
+      </article>
+    
+      <article class="chapter" id="section-10">
+        <div class="chapter-kicker">Section 10</div>
+        <h2>Between My Heart and your Absence</h2>
+        <div class="chapter-text"><p>Between my heart and your absence lies a long, exhausting, and silent road. This road is neither visible nor marked on any map, yet I walk upon it every single day. There is no destination here, no signposts — only shadows of memories waiting for me at every turn. Your absence is not merely your non-existence; it is a presence that continues to breathe within me every moment.</p>
+<p>You left — or perhaps you were never truly here. Now, I can no longer tell the difference. Some relationships hurt the same whether they exist or not. You are that chapter of my life that was written but never completed. Your absence did not leave an empty space inside me; instead, it built an entire world - one where every - thing beings with your name and ends with your silence...</p>
+<p>I did not lose you, because one cannot lose what was never theirs. And yet, I feel your absence every day. This absence is not of an object, nor even of a person — it is the absence of a possibility that was never fulfilled. It is the absence of that &quot;maybe&quot;, of that &quot;what if&quot;, which still lives on in every corner of my thoughts.</p>
+<p>Between my heart and your absence, time has changed many things. I have learned how to smile, how to talk to people, how to hide the moisture in my eyes. But I never learned how to live without you. Living without you and merely surviving without you - there is a fragile line between the two, and everyday I walk upon it, trying to maintain my balance....</p>
+<p>The Greatest truth of your absence is that it does not make me lonely; instead, it imprisons me within myself. Every emotion, every memory, every dream returns back to me, because outside, there is no trace of you to be found. You are a question to which no one has an answer, and I am a book that writes your name on every page while endlessly searching for you.</p>
+<p>“Nights are the most difficult. During the day, the noise of the world manages to hold me together, but at night, when everything falls silent, your absence speaks the loudest.” In the darkness, your memories grow brighter. I keep staring at the ceiling, wondering – do you ever stare into emptiness the way I do? Or am I merely a passing through thought for you, erased long ago by time? Between my heart and your absence stands a bridge made of memories. I have fallen countless times while walking on it, yet every day I step onto it again. Because on this bridge echo your laughter, layers of your silence, and the fragrance of those unfinished moments we never truly lived....</p>
+<p>Your absence taught me that love is not always about being together. Sometimes, love is about staying still—not waiting for someone, but living within their memory. I never asked anything from you, yet you took so much from me — my sleep, my peace, and that innocent belief that every story has a beautiful ending. Still, I am not angry with your absence... perhaps because it is this very absence that introduced me to myself. Had you been here, maybe I would never have learned to feel so deeply. Your non-existence left behind a sensitivity within me — one that finds meaning in the smallest things: in raindrops, in unfinished songs, and in roads where no one walks beside me.</p>
+<p>Between my heart and your absence exists an unspoken agreement. I do not call out to you, and you do not return. We are both confined within our own boundaries — you in your world, and I in my emotions. Yet between these two separate words worlds runs an invisible thread that pulls me closer to you with every breath...</p>
+<p>Sometimes I think— if you had asked even once how I was, perhaps this distance would not feel so heavy. But maybe this is the purest form of love — to be lived without expectations. I never complained, because complaints belong to those who have rights, and I never had any rights over you. Between my heart and your absence, hope is still alive — but not the hope of reunion, only the hope of understanding. That one day, this pain will no longer feel like a burden, but will turn into a story — a story I can tell without trembling. Perhaps then I will be able to say that yes, I loved one-sidedly, and I loved with complete devotion..</p>
+<p>तुम आज ही इजहार करो क्या हो जाएगा डरने से,</p>
+<p>और प्यार नहीं होता है कम (block) ब्लॉक किसी के करने से</p>
+<p>So this is something I have personally experienced — that he blocked me. But blocking someone doesn&#x27;t really end feelings; it makes notifications, profile pic and status disappear. The conversations remain etched in the mind. The other person thinks that you have moved on, but they don&#x27;t know that you read those chats everyday. You were a part of their daily life, and suddenly you disappeared — you blocked them, thinking it was the easiest option. But it isn&#x27;t. It may be easy for you, but not for the one on other side ... They remember every single word you ever said and I&#x27;d love really ended just by blocking someone, then 99% of people would have moved on by now... We don&#x27;t get stories at all. For you, from your side, that chapter is over, but many times the other person, even after being broken, still holds on to hopes from you. They smile because you liked their smile, they live in their childlike ways because you liked their innocence. Even after being blocked, they never really let you go, because somewhere along the way, they learned how to live with your memories.</p>
+<p>Meri Zindagi Ke raaz mein ek raaz tum bhi ho,</p>
+<p>Meri Zindagi Ki aas mein ek aas tum bhi ho,</p>
+<p>Tum kya ho mere liye yeh mein khud bhi nhi jaanti,</p>
+<p>par Meri Zindagi Ke Kaash mein ek Kaash tum bhi ho.</p>
+<p>Mukh toh khair tu badal chuka,</p>
+<p>raasta kaise badlega,</p>
+<p>Aaj tu bhale kehta hai ki mein kon hoon,</p>
+<p>Mujhse waasta kaise badlega,</p>
+<p>Waqt shayad tu badal de,</p>
+<p>Taqdeer kaise badlega,</p>
+<p>Insan shayad tu badal de,</p>
+<p>mujhse raabta kaise badlega,</p>
+<p>Khudko toh tu badal chuka hai,</p>
+<p>Woh meri dali aadtein kaise badlega..</p>
+<p>&quot;बाल बिखरे छोड़ने लगी हूँ,</p>
+<p>जब से उसने संवारना छोड़ा है,</p>
+<p>नाम मेरा मुझे परेशान करने लगा है,</p>
+<p>जब से उसने पुकारना छोड़ा है।&quot;</p>
+<p>Teri gali se jana chodh dungi,</p>
+<p>Tere samne aana chodh dungi,</p>
+<p>Tu ek baar meri aankhon mein aankhein dalke kehde - तू मेरा नहीं है</p>
+<p>Mein tujhe apna kehna chodh dungi,</p>
+<p>Tu sapne mein aana chodh de,</p>
+<p>Mein khwaab sajana chodh dungi,</p>
+<p>Tu chodh de mujhe yun peeche mudke dekhna,</p>
+<p>Mein tujhse vapis aane ki Umeed lagana chodh dungi.</p>
+<p>Tere bina Zindagi adhuri si lagti hai,</p>
+<p>Mujhe mera jeena bhi ab majboori si lagti hai,</p>
+<p>Tujhe lagta hai Main chun lungi teri jagah kisi aur ko,</p>
+<p>Magar sach kahun - Hamare beech ki doori bhi,</p>
+<p>Mujhe doori Kahan lagti hai,</p>
+<p>Hmara milna itfaq toh nhi ho sakta,</p>
+<p>Tumse pyaar yeh sirf ek ehsaas toh nhi ho sakta,</p>
+<p>Jruur tujhme Kuch toh alag hai,</p>
+<p>yoon hi koi shakhs itna khaas toh nhi ho skta.</p>
+<p>&quot;He was my forever, I was his never.&quot;</p>
+<p>They say love is the most beautiful feeling in the world. But sometimes, the same love becomes the deepest pain one can ever feel. Some relationships are formed without a name, lived without a destination, and end without a conclusion. In such relationships, there are no promises, no conditions—only silent hopes. And more often than not, it is those very hopes that break a person the most.</p>
+<p>&quot;The Beginning of an Incomplete love&quot;</p>
+<p>Life often brings two people onto the same path, even when their destinations are completely different. From the outside, everything seems perfect - conversations, laughter, time spent together. But the reality inside the heart is often very different. For one person, the relationship becomes an entire world. For the other, it remains just a small part of life. When someone falls in love, they rarely realize it at first. Slowly, unknowingly, the other person becomes their happiness, their comfort, their favourite thought. Their voice, their smile, their presence - everything starts to feel special. But it is not necessary that the other person feels the same way.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-11">
+        <div class="chapter-kicker">Section 11</div>
+        <h2>The Difference Between &quot;Forever&quot; and &quot;Never&quot;</h2>
+        <div class="chapter-text"><p>The Biggest tragedy in many relation-ships is this -One person considers someone their &quot;forever&quot;, while the other only sees them as a temporary companion. This imbalance slowly weakens the bond from within. The line between friendship and love is very thin. Sometimes one person crosses that line, while the other continues to stand behind it. And that is where misunderstandings, expectations and heartbreak begin. The most dangerous thing in such relationship is silence.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-12">
+        <div class="chapter-kicker">Section 12</div>
+        <h2>The weight of One-sided</h2>
+        <div class="chapter-text"><p>One-sided love is perhaps the heaviest emotion in the world. Because in it, you don&#x27;t even have the right to complain. There is no reason to be angry, no right to demand anything. The person who loves learns to be happy in other&#x27;s happiness. the painful truth is - that the relationship you considered special was never truly special at all And, that is where the real test begins.to watch them move ahead without you - None of it is easy. But perhaps that is what love truly means -Wanting someone to be happy, even if that happiness does not include you.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-13">
+        <div class="chapter-kicker">Section 13</div>
+        <h2>Broken Dreams and changing realities</h2>
+        <div class="chapter-text"><p>With time, everything changes.</p>
+<p>The relationship that once felt like the whole world slowly turns into a memory.</p>
+<p>The person who was once a daily part of life gradually becomes distant.</p>
+<p>And one day, the realization finally arrives — the story is over.</p>
+<p>Often, the other person moves ahead in life — with new beginnings, new dreams. And the one who loved silently remains behind, holding on to old emotions.</p>
+<p>That is when one understands—Some people are the entire world for us, but for them, we are only a chapter.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-14">
+        <div class="chapter-kicker">Section 14</div>
+        <h2>Accepting the Truth</h2>
+        <div class="chapter-text"><p>The hardest thing in life is acceptance. Accepting that —The person you considered your &quot;forever&quot; was never truly yours. But this acceptance is also what makes a person stronger. Every incomplete story teaches something — patience, understanding and self-love.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-15">
+        <div class="chapter-kicker">Section 15</div>
+        <h2>The Beauty of Incomplete Stories</h2>
+        <div class="chapter-text"><p>Not every love story needs to be completed. Not every relationship reaches its destination. Some stories remain only as feelings, as memories And maybe those are the deepest stories of all. Because they teach us —Love is not always about possession. Sometimes, love is about letting go.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-16">
+        <div class="chapter-kicker">Section 16</div>
+        <h2>The final truth</h2>
+        <div class="chapter-text"><p>In this world, many people become someone&#x27;s &quot;forever&quot; and many remain someone&#x27;s &quot;never&quot;. That is the bitter reality of life. Becoming someone&#x27;s forever is a matter of fate. And remaining someone&#x27;s never is often just destiny. And the journey between these two -that is where the real story lives.&quot; He was my forever, I was his never &quot;. This is not just a sentence. It is the voice of countless incomplete love stories.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-17">
+        <div class="chapter-kicker">Section 17</div>
+        <h2>&quot;Did I Fall in Love Alone ?&quot;</h2>
+        <div class="chapter-text"><p>Did I truly fall in love alone, or was it merely my misunderstanding that the feelings flowing through my veins might also have once pulsed, even faintly, in some hidden corner of his heart - this question no longer lives inside me as a search for answers, but as a permanent silence. because when love is one-sided, it does not ask questions, it simply learns how to endure quietly ; I still remember how his simplest smile could give meaning to my entire day, how even in his absence his presence breathed within every thought of mine, and how I treated every moment as special if he was even slightly a part of it - without knowing that perhaps those moments held no weight for him at all; I searched for meanings in his words, created reasons for his silence, named circumstances to justify his indifference, and called his distance a compulsion, because a person in love does not see the truth, they only see what helps them survive; I told myself countless times that if I was remembering him, then somewhere he must be remembering me too, that if my heart was restless, then perhaps his heart also felt my absence at times, but slowly I began to understand that the connection of hearts is not always equal – sometimes one heart beats with all its strength while the other merely exist out of formality; I changed the directions of my dreams for him, made my hopes smaller, softened my voice, just so he would not feel uncomfortable , just so he might stay, but the bitterest truth of love is this : the one who is not afraid of losing you never truly tries to keep you; I kept mistaking my waiting for him as love, while in reality that waiting had become my habit - a habit that was slowly hollowing me out from within; but he never said he didn&#x27;t either, and perhaps that incompleteness became my greatest weakness, because in unfinished words a person writes their entire story ; I began to find him in every small thing - in songs, in streets, in silent evenings — while he perhaps walked past my presence thinking of it as just another part of the crowd; how strange it is that the person for whom you could fight the whole world will not even fight a single question for you; I never placed conditions to prove my love, never made demands, because I believed true love does not ask, it understands, but I forgot that understanding is only beautiful as long as it is valued; gradually, I realized that I was an option in his life — an option he remembered when loneliness visited him, but one he could never make a priority; and then one day, without any dramatic argument, without any decisive conversation, he simply drifted away — so far away that his voice turned into a memory and his presence into a story; that day, for the first time, I had to accept that perhaps I truly had fallen in love alone., that the relationship I thought was &quot;we&quot; was, in truth, only &quot;me&quot;, accepting this was not easy, Because it meant admitting that my emotions were real, but their direction was wrong ; for a long time I blamed myself — maybe I loved too much, maybe I expected too much, maybe my love itself was heavy — but then I understood that love is never too much ; it is only too much for the wrong person ; the greatest punishment of one-sided love, is not that you do not get the person you love, but that you lose yourself — your laughter, your self-respect, your clarity — everything, in the hope that one day they will see how deeply you love them ; but every story has a turning point, and the turning point of my story was the realization that before being chosen by him, I had to choose myself ; it was not easy, because when a heart has made someone else its home, it takes time to return and settle within itself again; yet, slowly, I learned to breathe without him, to let days pass without his name, and to accept that my love was not incomplete — it was simply alone; today, when I look back, along with the pain there is a strange kind of peace, because I loved truly, without conditions, without calculation, and even though that love was not returned to me, it taught me that I am capable of feeling deeply — and that is not my defeat, it is my strength; so if someone asks me whether I fell in love alone, I will smile and say — yes, perhaps but even in that loneliness my love was true, and true love is never wasted, it only makes us a little more human.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-18">
+        <div class="chapter-kicker">Section 18</div>
+        <h2>An UNKNOWN Beginning ~ ♡</h2>
+        <div class="chapter-text"><p>Some meetings happen by chance, and some gradually become a necessity. She realized that even his silence carried a sense of comfort. He neither laughed much nor spoke much, yet his presence made her heart feel lighter every time.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-19">
+        <div class="chapter-kicker">Section 19</div>
+        <h2>From Ordinary to special ~ ♡</h2>
+        <div class="chapter-text"><p>It all started simply - talking about studies and college, work. Gradually, every little thing began to feel special. His smile, his help, made her day easier.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-20">
+        <div class="chapter-kicker">Section 20</div>
+        <h2>The Depth of Feelings ~ ♡</h2>
+        <div class="chapter-text"><p>She felt every little thing. A delayed smile or an incomplete reply had a strong effect on her heart. She knew this love would take her somewhere but the direction was unknown.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-21">
+        <div class="chapter-kicker">Section 21</div>
+        <h2>Habit Turned into Love ~ ♡</h2>
+        <div class="chapter-text"><p>Thinking of him in the morning, saying his name at night - without asking, the heart choose this. She feared that acknowledging it would change everything. But love had silently made a house in her heart.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-22">
+        <div class="chapter-kicker">Section 22</div>
+        <h2>Silent Entry of Hopes ~ ♡</h2>
+        <div class="chapter-text"><p>She never expressed her hopes openly. Yet the heart asked itself , &quot;what if he feels the same?&quot;</p></div>
+      </article>
+    
+      <article class="chapter" id="section-23">
+        <div class="chapter-kicker">Section 23</div>
+        <h2>His Fear ~ ♡</h2>
+        <div class="chapter-text"><p>He carried a fear – about the future, career, responsibilities. He considered love a risk, and this became the gap between them.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-24">
+        <div class="chapter-kicker">Section 24</div>
+        <h2>The First Signs of Distance ~ ♡</h2>
+        <div class="chapter-text"><p>Distance never arrives suddenly. It slowly comes as silence, Delayed messages, postponed calls. She felt it all but didn&#x27;t question it.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-25">
+        <div class="chapter-kicker">Section 25</div>
+        <h2>Loving in Silence ~ ♡</h2>
+        <div class="chapter-text"><p>She choose to love silently. Sometimes, time only strengthens the distance.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-26">
+        <div class="chapter-kicker">Section 26</div>
+        <h2>The truth about Career ~ ♡</h2>
+        <div class="chapter-text"><p>He said that career was more important right now. She smiled, but inside she was deeply hurt.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-27">
+        <div class="chapter-kicker">Section 27</div>
+        <h2>The Last Meeting ~ ♡</h2>
+        <div class="chapter-text"><p>A few words, a lot of silence. Both knew that something had changed. At that time every word carried the weight of unspoken feelings. The silence felt heavier than any conversation. His eyes avoided her for long stretches. She wanted to say something meaningful, to ask him to stay, to promise that nothing would change, but the courage left her. All that remained were half-smiles and the quiet understanding that this meeting marked the end. When they finally left, their steps diverged on the same path they had once walked side by side. Each step echoed in her heart, a reminder that some departures are silent yet permanent.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-28">
+        <div class="chapter-kicker">Section 28</div>
+        <h2>The Break 〰 ♡</h2>
+        <div class="chapter-text"><p>He called it a break. she stayed in her room, feeling the emptiness of his absence. Days felt long and muted, filled with memories that refused to fade.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-29">
+        <div class="chapter-kicker">Section 29</div>
+        <h2>The Noise of Silence 〰 ♡</h2>
+        <div class="chapter-text"><p>His absence made the loudest noise. She realized that not being there can be heavier than being present.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-30">
+        <div class="chapter-kicker">Section 30</div>
+        <h2>The Battle with memories ~ ♡</h2>
+        <div class="chapter-text"><p>He was everywhere - songs, roads, little habits. Each memory left her laughing and crying at the same time.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-31">
+        <div class="chapter-kicker">Section 31</div>
+        <h2>Question Left Unspoken ~ ♡</h2>
+        <div class="chapter-text"><p>Does he remember? Does it matter to him? She never asked. She knew some answers would only brings more pain.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-32">
+        <div class="chapter-kicker">Section 32</div>
+        <h2>Losing Oneself ~ ♡</h2>
+        <div class="chapter-text"><p>Slowly, she began losing herself. Her laughter faded , her eyes grew weary . Sometimes losing yourself in love feels necessary, yet the loss is immense.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-33">
+        <div class="chapter-kicker">Section 33</div>
+        <h2>The Silence of Breaking ~ ♡</h2>
+        <div class="chapter-text"><p>Some breaks make no sound. A person simply changes from within. She was changing too.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-34">
+        <div class="chapter-kicker">Section 34</div>
+        <h2>Acceptance ~ ♡</h2>
+        <div class="chapter-text"><p>She accepted that he would not be a part of her life. The acceptance was painful but necessary.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-35">
+        <div class="chapter-kicker">Section 35</div>
+        <h2>Refusing to move on ~ ♡</h2>
+        <div class="chapter-text"><p>Though life continued around her, she never choose to move on. She carried the love in her heart , refusing to replace it or let go. Each day , she lived with the memory and presence of what once was, keeping it alive within her.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-36">
+        <div class="chapter-kicker">Section 36</div>
+        <h2>His silence ~ ♡</h2>
+        <div class="chapter-text"><p>He too was broken inside, yet he never looked back. His silence taught her that sometimes people walk away because of fear and weakness.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-37">
+        <div class="chapter-kicker">Section 37</div>
+        <h2>Unfinished Love ~ ♡</h2>
+        <div class="chapter-text"><p>Their love was unfinished, yet it was real. That was its greatest truth. Love doesn&#x27;t always mean being together; sometimes it just stays in the heart.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-38">
+        <div class="chapter-kicker">Section 38</div>
+        <h2>After losing each other ~ ♡</h2>
+        <div class="chapter-text"><p>After the breakup, she struggled with loneliness and sadness. Some days felt heavier than others. She missed the small comforts of being with him. He, too, faced his own emptiness — regret, longing, and the silent weight of what could have been. They both forgot to laugh without each other. But they both also learned that absence can teach more than presence.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-39">
+        <div class="chapter-kicker">Section 39</div>
+        <h2>The Final Truth ~ ♡</h2>
+        <div class="chapter-text"><p>He stayed in her heart but not in her life. Some people just come to deepen us, to leave a lasting mark, and to teach us the strength to continue even when love is no longer shared. Some relationships are not meant to last together, but to make us wiser and stronger.</p>
+<p>Some things are never spoken, because saying them out loud does not change the truth. Between us, too, there was so much that remained unsaid—unspoken, unfinished, and steadily growing heavier. I kept thinking that you would speak, that one day you would put words to your fears, accept it and say that you were just as ready as I was. But you stayed silent. There was no coldness in your silence, only exhaustion—the exhaustion of constantly running away from yourself. I would sit in front of you, trying to understand your quiet, wanting to make it easier from my side, as if love&#x27;s purpose were to soften fear into gentleness. yet everytime I came closer, I felt you retreat further inward, as though my presence held up a mirror to you, and you wanted to turn your eyes away from it. Slowly, I realized that some relationships do not end because there is deceit in them, but because there is no courage to speak the truth. You were not afraid of losing me; you were afraid of losing yourself - the old, safe, solitary version of you. And that day, without any final sentence, without words of goodbye, we let each other go. I did not leave you; I simply let go of a waiting that had become one-sided. Because in love, the deepest pain is not of leaving, but of the words that were never said.</p>
+<p>&quot;I was ready, you were afraid.&quot;</p>
+<p>I was ready — completely, quietly, without making noise, without drawing up a list of promises, without asking what would happen next — because I believed that when two hearts are together, the path finds itself. But at every turn, you would pause, as if love were not a feeling but a risk that needed to be measured and calculated. I felt the relationship, while you kept trying to understand it; I wanted to live in the present, and you kept postponing today because of fears about tomorrow. You were afraid that if you came too close, you might get bound, might lose your freedom, while I knew that true companionship does not take freedom away – it deepens it. I was ready to accept your incompleteness, to make your struggles my own, to stay even on the days when love is not easy, when exhaustion settles in and silence takes over. But you were afraid of questions whose answers begin with &quot;us&quot;. You said the circumstances were not right, the time was not right, your mind was unsettled, yet the truth was that you were afraid of confronting yourself, because love is not just something you feel -it is something you choose, and choosing requires courage. I never forced you, never placed the weight of promises on you; I only wanted that when everything started to shake, you would not step back. yet everytime the relationship began to deepen, you took a step away, as if someone had warned you that getting too close was unsafe. I kept telling myself that maybe you needed time, that fear can also be a reason, that not everyone is as ready as I am — but slowly I realized that you were ready for your dreams, ready for your decisions, ready for your comfort, just not for the responsibility that comes with love. And that realization hurts the most: that I never wanted to become a burden, yet I was left as if I had asked for too much. I had only asked one thing—when everything wavered, would you stay? And you were afraid, afraid that if you stayed, you wouldn&#x27;t be able to run; afraid that if you truly committed, you wouldn&#x27;t be able to lie to yourself anymore. So you called distance “wisdom” and silence “peace”, while for me it was an emptiness I felt every single day. I did not stop you, because someone who stays out of fear only stays out of compulsion — and I never wanted compulsion. I wanted the person who would stand firm despite fear.</p>
+<p>Today, when I look back, there are no complaints left, only one clear difference — I was ready for love, and you were afraid of it; I had the courage to stay, and you stepped back even before losing anything.</p>
+<p>Some people are lost because they are cruel, and some are lost because they are not ready — and more often than not, those who are ready are left behind by those who are afraid.</p>
+<p>Some people lose love because they choose its hurt, and some lose it because they never find the courage to choose at all.</p>
+<p>And those who are ready — who wait, who believed, who stay — are often left standing alone, holding a love they were brave enough to offer to someone who was too afraid to keep it.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-40">
+        <div class="chapter-kicker">Section 40</div>
+        <h2>P1</h2>
+        <div class="chapter-text"><p>Sometimes destiny brings two people together in such a way that it feels as if they were created only for each other — the same moment, the same turn of life, the same unspoken feelings — and yet that very destiny separates them so mercilessly that both are left wondering for a lifetime: if we were never meant to be together, why were we made to meet at all? This story is much like that — where two hearts collided, paused, understood and felt deeply, but could never walk side by side. It was not a sudden coincidence; it was a bond that grew slowly, born in silence before words, and settled in the eyes before promises were ever made. Neither of them said it out loud, yet both knew something was there—something intense, something real.</p>
+<p>Those meetings that seemed accidental were, in truth, carefully plotted by fate itself. The same place, the same time, the same exchanged glances—each encounter felt as though an invisible thread was pulling them toward one another. In the beginning, it all felt light—an innocent smile, an unfinished conversation, a question left unasked. But gradually, that lightness began to carry weight on the heart. A weight that felt beautiful, yet frightening. Because when someone makes a place in your heart without any effort, the fear of losing them becomes unbearable.</p>
+<p>The strangest thing about them was how deeply they understood each other without knowing everything. One person&#x27;s silence made the other restless, and one smile was enough to brighten the other&#x27;s entire day. They recognized each other&#x27;s weaknesses without ever naming them. But perhaps that was their greatest mistake—to feel everything so deeply, yet never say it clearly. One feared that taking a step forward would make the other step back. The other lived with the same fear—that their truth might scare the first away.</p>
+<p>Destiny had brought them together, but courage remained incomplete. Or perhaps it was the circumstances. Or maybe it was time itself. Because not every right feeling arrives at the right moment. Sometimes the right people meet at the wrong time, and then spend their entire lives trying to correct that mistake—in memories, in thoughts, in silent nights.</p>
+<p>Their bond did not need a name. There were no rights, but there was belonging. There were no promises, but there were expectations. And perhaps these expectations slowly turned into a burden. One learned how to wait, while the other learned how to hold back. One began to see a future in every small moment, while the other grew afraid of every thought that pointed toward tomorrow.</p>
+<p>At times, they were painfully close—so close that one could feel the other&#x27;s breath—and then suddenly so distant that even sending a message felt impossible. This distance was not born out of argument, but out of the fear that grips a person just before speaking the truth. Both knew that if this bond moved even one step forward, it would either last forever or break forever. And some people are so afraid of breaking that they refuse to bind themselves at all.</p>
+<p>Time paused, and destiny watched in silence. It had done its part by making them meet, but perhaps it left the responsibility of staying together to human beings. And human beings are fragile. They lose to circumstances. They fear society. They get tangled in questions about the future. Slowly, conversations faded. Meetings turned into memories. And the bond that once began in the eyes now settled quietly into a corner of the heart. But it did not end. Because some relationships never truly end — they simply leave your life and continue to live inside your heart. Even today, he remembers how she could understand his worries without him saying a word. And even today, she thinks about how the world felt a little easier just in his presence. But now, thinking about all this serves no purpose, except to make the heart feel heavy for a while.</p>
+<p>Destiny did meet them — this much is true. But the responsibility of becoming one...... perhaps neither of them could fulfil. And from here begins that incomplete story — one that will never be complete , yet will never truly end either.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-41">
+        <div class="chapter-kicker">Section 41</div>
+        <h2>Pt 2</h2>
+        <div class="chapter-text"><p>With time, everything is supposed to change — or so people say. But some feelings never really change; they simply fall silent. That was what happened between them. Conversations grew fewer, meetings slipped away and what was once a daily presence slowly turned into a collection of memories. yet the heart refused to accept the ending. Everyday and every night, it replayed the same incomplete story, like a forgotten melody that suddenly begins to echo in the quiet. She kept telling herself that it no longer mattered. That she had become stronger. That she had learned how to move forward. And perhaps all of that was true — at last on the surface. But there are certain truths that reveal themselves only in the darkness of night, when the world falls asleep and the heart stays awake. In those moments, she realized that some questions were still standing right where they had been left — unanswered, unfinished and painfully alive. He tried to move on as well. He drowned himself in work, surrounded himself with people, wore laughter like a shield. But whenever life slowed down, whenever the noise faded, her face appeared — uninvited, unquestioned. It angered him. He wondered, so much time has passed, then why does it still hurt? But the heart&#x27;s questions rarely find answers in the mind.</p>
+<p>There had been no major fight between them. No single moment that could be blamed. And that was the hardest part. If something had gone wrong, forgetting might have been easier. But here, everything had felt right – yet still remained incomplete. And incompleteness has a way of quietly settling inside a person.</p>
+<p>At times, she wondered, what if I had spoken that day?</p>
+<p>And he wondered, what if I had stopped and listened to the truth in that moment?</p>
+<p>But &quot;what if&quot; and &quot;if only&quot; are the cruelest words in a lifetime. They never let you move forward; they only keep pulling you back.</p>
+<p>Their paths had now diverged. There were new people, new stories. Yet between every new beginning, an old shadow continued to walk beside them. She smiled with someone else, but some smiles still felt unfinished. He talked to someone new, but some conversation still remained unsaid.</p>
+<p>The strangest truth was this: both had learned how to live without each other — but neither had learned how to forget. And perhaps that was their punishment. Destiny had made them meet so they could understand what something real feels like. Then it pulled them apart, so they would never be able to forget it.</p>
+<p>Sometimes she accepted that maybe this was how it was meant to be. That not every story is meant to end in togetherness. Some stories are meant to live on only as feelings - experienced deeply , but never fulfilled . And perhaps those are the truest stories of all.</p>
+<p>He, too, had come to understand that some people enter our lives not to stay, but to change us. That meeting had made him more sensitive, more aware. By losing love, he had learned its value.</p>
+<p>And then one day — without any announcement — she said goodbye in her heart. No message, no complaint. Just a quiet acceptance that whatever they had, had reached its limit. She let him leave her life, but not her heart. Because some relationships continue to exist even after they leave — within heartbeats, within memories, and within those silent moments when a person finally speaks the truth to themselves.</p>
+<p>Destiny remains silent even now.</p>
+<p>It still does not say who was at fault.</p>
+<p>Perhaps because this was never a story about fault at all —</p>
+<p>It was a story of incomplete courage, wrong timing and genuine feelings.</p>
+<p>And some stories....Even without being complete, walk with us for a lifetime.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-42">
+        <div class="chapter-kicker">Section 42</div>
+        <h2>Pt 1</h2>
+        <div class="chapter-text"><p>What if everything had happened the way I wanted it to? What if our story had been written in trust instead of fear? What if silences had not turned into questions, and questions had not become the reason relationships fall apart? What if &quot;Someday&quot; had turned into &quot;forever&quot;— would we still be remembering each other today like strangers who once meant everything?</p>
+<p>I ask myself this question often. Not to complain, not to blame destiny—but simply because the heart sometimes wants to relive the past once more. That time when everything felt possible. When you existed, I existed, and there was no fear standing between us—except the fear of losing one another.</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>perhaps even the beginning would have been different.</p>
+<p>Maybe we wouldn&#x27;t have been so careful. Maybe we wouldn&#x27;t have measured every word before speaking.</p>
+<p>Maybe you would have understood that your silence didn&#x27;t make me strong — it made me restless.</p>
+<p>And maybe I would have realized that my questions were not pressure for you, it made me restless.</p>
+<p>We would have moved forward slowly, but honestly,</p>
+<p>without constantly thinking, &quot;What if this happens, then what?&quot;</p>
+<p>Because when love is real, the fear of the future feels smaller than the beauty of the present.</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>perhaps we wouldn&#x27;t have spent those nights alone.</p>
+<p>you wouldn&#x27;t have hidden the chaos in your mind from me.</p>
+<p>And I wouldn&#x27;t have stayed silent everytime, thinking,</p>
+<p>&quot;What if my truth pushes you away?&quot; We wouldn&#x27;t have run from each other. Nor would we have tried so much hard to appear strong</p>
+<p>that our inner weaknesses became invisible.</p>
+<p>Maybe then you could have said,&quot; I am scared, but I don&#x27;t want to lose you.&quot;</p>
+<p>And I could have said,&quot; I can wait – but not in uncertainty.&quot;</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>Maybe we wouldn&#x27;t have stopped midway. There wouldn&#x27;t have been unfinished conversations,</p>
+<p>or those sudden distances.</p>
+<p>There wouldn&#x27;t have been moments when we were close — yet impossibly far.</p>
+<p>Then after every meeting, the heart wouldn&#x27;t feel heavy. Then every goodbye wouldn&#x27;t carry the fear, &quot;Who knows if we&#x27;ll meet again?&quot;</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>memories wouldn&#x27;t hurt this much today. The moments we lived</p>
+<p>wouldn&#x27;t feel like punishment, they would have become strength.</p>
+<p>Maybe you wouldn&#x27;t have looked at me as if you were saying so much while holding back even more.</p>
+<p>And maybe I wouldn&#x27;t have looked at you</p>
+<p>As if everytime was the last time.</p>
+<p>We wouldn&#x27;t have been afraid of losing each other —</p>
+<p>we would have been afraid of losing each other -</p>
+<p>We would have been afraid of not understanding each other .</p>
+<p>And perhaps that would have been the difference between the story  we dreamed of and the story that never reached completion.</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>maybe today</p>
+<p>there wouldn&#x27;t even be a question called&quot; what if&quot;.</p>
+<p>Then I wouldn&#x27;t wonder</p>
+<p>why you didn&#x27;t stay in my life.</p>
+<p>And you wouldn&#x27;t wonder</p>
+<p>Whether I ever truly left your heart.</p>
+<p>But maybe</p>
+<p>the story didn&#x27;t turn out that way</p>
+<p>Because we weren&#x27;t ready.</p>
+<p>or maybe because</p>
+<p>we didn&#x27;t lose to each other —</p>
+<p>we lost to our fears.</p>
+<p>And that thought</p>
+<p>silences my heart every single time —</p>
+<p>That if our story had been</p>
+<p>the way I wanted it to be,</p>
+<p>maybe today</p>
+<p>we wouldn&#x27;t feel this incomplete...</p>
+<p>But perhaps,</p>
+<p>we also wouldn&#x27;t have been</p>
+<p>this deeply connected either.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-43">
+        <div class="chapter-kicker">Section 43</div>
+        <h2>Pt 2</h2>
+        <div class="chapter-text"><p>If our story had been the way I wanted it to be, perhaps time wouldn&#x27;t have exhausted us so much.</p>
+<p>We wouldn&#x27;t have had to keep convincing ourselves every day that&quot;</p>
+<p>whatever happened, happened for the best.&quot;</p>
+<p>Because when the heart has already accepted something,</p></div>
+      </article>
+    
+      <article class="chapter" id="section-44">
+        <div class="chapter-kicker">Section 44</div>
+        <h2>The mind doesn&#x27;t need explanations.</h2>
+        <div class="chapter-text"><p>If our story had been the way I wanted it to be,</p>
+<p>maybe we wouldn&#x27;t have been afraid of each other&#x27;s confusion.</p>
+<p>You wouldn&#x27;t have needed to prove that you are strong.</p>
+<p>And I wouldn&#x27;t have needed to pretend that I didn&#x27;t need support.</p>
+<p>We would have accepted each other even in our incompleteness. As if it were okay to not have answers to every question immediately, and as if hiding fear were not a form of bravery.</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>Maybe you would have stayed.</p>
+<p>Just for a moment.</p>
+<p>You would have looked into my eyes and understand</p>
+<p>that I wasn&#x27;t complaining —</p>
+<p>I was simply afraid of losing you.</p>
+<p>And maybe I would have learned patience too.</p>
+<p>I wouldn&#x27;t have mistaken every silence for distance.</p>
+<p>I wouldn&#x27;t have turned every delayed reply into a punishment for myself.</p>
+<p>We wouldn&#x27;t have asked each other, &quot;What are we?&quot;</p>
+<p>Because we would have known what we were becoming.</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>even circumstances wouldn&#x27;t have felt so heavy.</p>
+<p>The world&#x27;s opinions, people&#x27;s judgements, questions about the future—</p>
+<p>none of it would have come between us.</p>
+<p>Because when two people stand together,</p>
+<p>Life becomes a little softer.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-45">
+        <div class="chapter-kicker">Section 45</div>
+        <h2>Pt 3</h2>
+        <div class="chapter-text"><p>If our story had been the way I wanted it to be,</p>
+<p>Perhaps memories wouldn&#x27;t hurt today. They would simply live as a quiet smile Somewhere in the heart.</p>
+<p>I wouldn&#x27;t wonder where things went wrong.</p>
+<p>And you wouldn&#x27;t wonder what might have happened if you had shown a little more courage.</p>
+<p>We wouldn&#x27;t place yesterday</p>
+<p>beside our pillows</p>
+<p>and make today feel heavier.</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>maybe even now</p>
+<p>we would be peace for each other,</p>
+<p>not questions.</p>
+<p>I wouldn&#x27;t repeat your name so silently.</p>
+<p>And you wouldn&#x27;t hide my memory so carefully.</p>
+<p>Perhaps we wouldn&#x27;t be so &quot;mature”. And maybe because of that,</p>
+<p>we would be a little happier.</p>
+<p>But then....</p>
+<p>Perhaps in that story,</p>
+<p>we wouldn&#x27;t have become</p>
+<p>the people we are today.</p>
+<p>Perhaps we wouldn&#x27;t have learned so much through pain.</p>
+<p>Perhaps we wouldn&#x27;t have understood love this deeply.</p>
+<p>Because the stories</p>
+<p>that never reach completion are the ones that teach us the most.</p>
+<p>And that truth</p>
+<p>Hurts the most-</p>
+<p>That if our story had been</p></div>
+      </article>
+    
+      <article class="chapter" id="section-46">
+        <div class="chapter-kicker">Section 46</div>
+        <h2>The way I wanted it to be,</h2>
+        <div class="chapter-text"><p>Perhaps we would be together.....</p>
+<p>But perhaps</p>
+<p>We would never have been this real.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-47">
+        <div class="chapter-kicker">Section 47</div>
+        <h2>The Life We Could Have Lived</h2>
+        <div class="chapter-text"><p>If our story had been the way I wanted it to be,</p>
+<p>maybe we wouldn&#x27;t carry life like a burden.</p>
+<p>We wouldn&#x27;t fear losing happiness even while living it.</p>
+<p>We would laugh with our whole hearts, and cry on each other&#x27;s shoulders.</p>
+<p>We wouldn&#x27;t let small moments disappear under the weight of future worries. If you were late, I would get upset —</p>
+<p>but I wouldn&#x27;t be afraid.</p>
+<p>And when I asked questions,</p>
+<p>you wouldn&#x27;t fall silent —</p>
+<p>you would sit with me and explain.</p>
+<p>We wouldn&#x27;t grow tired of each other&#x27;s weaknesses.</p>
+<p>Because we would know that being together doesn&#x27;t mean being perfect —</p>
+<p>It means being honest.</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>we wouldn&#x27;t become obstacles to each other&#x27;s dreams.</p>
+<p>You would move forward,</p>
+<p>And I would walk beside you.</p>
+<p>I would change,</p>
+<p>and you would hold me steady.</p>
+<p>We wouldn&#x27;t try to prove to the world that we were right —</p>
+<p>we would simply be enough for each other.</p>
+<p>Nights wouldn&#x27;t be filled with fear,</p>
+<p>but with plans.</p>
+<p>Talks about tomorrow wouldn&#x27;t feel like questions,</p>
+<p>they would feel like excitement.</p>
+<p>And maybe.....</p>
+<p>We would understand that love isn&#x27;t about  winning everyday—</p>
+<p>It&#x27;s about choosing each other everyday.</p>
+<p>Looking Back from Today</p>
+<p>Today, when I look back,</p>
+<p>I don&#x27;t see complaints —I see understanding.</p>
+<p>I no longer ask</p>
+<p>who was at fault.</p>
+<p>Because some stories don&#x27;t break because of mistakes —</p>
+<p>they break because of fear.</p>
+<p>You still exist somewhere —not in my life,</p>
+<p>but fully alive in my memories.</p>
+<p>And I am still here —a little calmer,</p>
+<p>a little stronger,</p>
+<p>and far more honest.</p>
+<p>&quot;What if&quot;</p>
+<p>doesn&#x27;t stop me anymore.</p>
+<p>It only reminds me</p>
+<p>that I truly felt something.</p>
+<p>That I loved completely,</p>
+<p>not halfway —</p>
+<p>even if the story itself remained</p>
+<p>incomplete.</p>
+<p>If our story had been the way I wanted it to be,</p>
+<p>perhaps we would be together.</p>
+<p>But the story that did happen made me who I am today.</p>
+<p>And perhaps</p>
+<p>sometimes,</p>
+<p>that is enough.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-48">
+        <div class="chapter-kicker">Section 48</div>
+        <h2>The Question</h2>
+        <div class="chapter-text"><p>What if everything had happened the way I wanted it to?</p>
+<p>The question never arrives loudly. It slips in during quiet evenings and sleepless nights, when memories surface without permission. I don’t ask it to accuse fate. I ask it because some stories do not end — they simply change the way they live inside us.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-49">
+        <div class="chapter-kicker">Section 49</div>
+        <h2>When We First Felt It</h2>
+        <div class="chapter-text"><p>There was a time when everything felt possible. Not because life was easy, but because you were there. Presence felt like certainty, and certainty felt like love. We didn&#x27;t know yet how fragile that feeling was.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-50">
+        <div class="chapter-kicker">Section 50</div>
+        <h2>Careful Words</h2>
+        <div class="chapter-text"><p>We measured every sentence. We weighed every feeling.</p>
+<p>We believed careful words would protect us. We didn&#x27;t realize that honesty, not caution, is what keeps a story alive.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-51">
+        <div class="chapter-kicker">Section 51</div>
+        <h2>Silence</h2>
+        <div class="chapter-text"><p>Your silence carried thoughts you couldn&#x27;t share. My questions carried fears I couldn&#x27;t hide.</p>
+<p>What if we had understood that silence, when misunderstood, slowly becomes distance?</p></div>
+      </article>
+    
+      <article class="chapter" id="section-52">
+        <div class="chapter-kicker">Section 52</div>
+        <h2>Almost</h2>
+        <div class="chapter-text"><p>We were not strangers. we were not lovers.</p>
+<p>We lived in the the</p>
+<p>space between — where emotions grow faster than promises. It felt safe to stay there, until it didn’t.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-53">
+        <div class="chapter-kicker">Section 53</div>
+        <h2>Fear Dressed as Strength</h2>
+        <div class="chapter-text"><p>You stayed quiet to appear strong. I asked for less to seem understanding.</p>
+<p>We both thought we were protecting love. In truth, we were protecting ourselves.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-54">
+        <div class="chapter-kicker">Section 54</div>
+        <h2>The Moment We Didn&#x27;t Choose</h2>
+        <div class="chapter-text"><p>There was no fight. No dramatic goodbye.</p>
+<p>Just a moment where neither of us stepped forward. And that moment quietly decided everything.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-55">
+        <div class="chapter-kicker">Section 55</div>
+        <h2>After you</h2>
+        <div class="chapter-text"><p>Life continued. Smiles returned. Days filled up.</p>
+<p>I learned how to live without you in my life — but not without you in my thoughts.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-56">
+        <div class="chapter-kicker">Section 56</div>
+        <h2>What if</h2>
+        <div class="chapter-text"><p>What if I had waited less? What if you had spoken sooner?</p>
+<p>These questions don&#x27;t need answer, they exist to remind me that the feelings was real.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-57">
+        <div class="chapter-kicker">Section 57</div>
+        <h2>The life we imagined</h2>
+        <div class="chapter-text"><p>sometimes I picture ordinary days — arguments that end in laughter, nights filled with plans, a future built slowly.</p>
+<p>What if love had been chosen everyday, not just felt?</p></div>
+      </article>
+    
+      <article class="chapter" id="section-58">
+        <div class="chapter-kicker">Section 58</div>
+        <h2>Understanding</h2>
+        <div class="chapter-text"><p>I no longer search for someone to blame.</p>
+<p>Some stories don&#x27;t break because of mistakes. They end because timing and courage never meet.</p></div>
+      </article>
+    
+      <article class="chapter" id="section-59">
+        <div class="chapter-kicker">Section 59</div>
+        <h2>Enough</h2>
+        <div class="chapter-text"><p>What if our story had been the way I wanted it to be?</p>
+<p>Maybe we would be together.</p>
+<p>But the story that did happen taught me how deeply I could feel, how honestly I could love.</p>
+<p>And maybe – sometimes – that is enough.</p>
+<p>Tujhe kisne kaha daga karti hu mein,</p>
+<p>Karne pe aaun toh sirf Wafa karti hoon mein,</p>
+<p>Kya woh sab baatein tujhe sunayi deti hein,</p>
+<p>Joh teri tasviron se kara karti hoon mein,</p>
+<p>Koi hai jiske liye padti hun Namaze saari</p>
+<p>Koi hai jiske liye dua karti hoon mein,</p>
+<p>Mein toh jeeti hoon tujhe dekh-dekh kar,</p>
+<p>Tujhe kisne kaha tumpe marti hoon mein...♡...</p>
+<p>Zindagi agar khaab huyi toh,</p>
+<p>Maut agar la-jawab huyi toh</p>
+<p>Tumhe laga mein khamosh hu,</p>
+<p>Khamoshi agar awaaz huyi toh,</p>
+<p>Mein yahan sabse Naraaz hoon,</p>
+<p>Zindagi Mujhse Naraaz huyi toh,</p>
+<p>Woh bola Mohabbat Nahi tumhe,</p>
+<p>Mein boli Be-Hisab huyi toh,</p>
+<p>Mein samjhi hoon ki tum aaye ho,</p>
+<p>Yeh sirf teri yaad huyi toh,</p>
+<p>Woh kehta kitna hi likha hoga</p>
+<p>Mein boli puri kitaab huyi toh</p></div>
+      </article>
+    
+      <article class="chapter" id="section-60">
+        <div class="chapter-kicker">Section 60</div>
+        <h2>The Unsaid Words</h2>
+        <div class="chapter-text"><p>She wanted to tell him that his presence was not just a habit to her, that waiting for him never felt like a burden — it felt like comfort. She wanted him to know how a small smile from him could make her entire day better, how his voice stirred something inside her that she herself could never fully understand. But she never said it, because she was afraid that if she did, nothing would remain the same. She also wanted to say that it mattered to her — so deeply. It mattered when he replied late. It mattered when he tried to ignore her. Yet every time, she silenced herself by saying &quot;It&#x27;s okay&quot;.She hide her emotions as if they were a mistake, as if expressing them were a weakness. She believed that if her words came out, she would expose herself completely, and perhaps she never gathered the courage for that. She carried complaints within her too, but even those complaints were wrapped in love. She wanted to tell him how much it hurt when he took her words lightly, when he failed to understand how many voices were hidden behind her silence. She wanted to say that every unfinished conversation, every postponed question, left an emptiness in her heart. She wanted to ask whether he ever missed her, whether he ever felt that something remained incomplete. But she never asked, because she feared the answer might not be the one she was hoping for. She also wanted to say how tired she was of pretending to be strong, of always being the understanding one, always adjusting, always putting herself second – it was never easy. She wished that just once, someone would ask her, “Are you okay?” and she could honestly answer, “No”. But she never took that chance. She learned to hide her pain behind a smile, believing that this was perhaps the right way to survive. There were so many unnamed hopes living inside her. She could never admit that she had thought about the future, that in her imagination she had built a world where they could speak freely, without fear, without hesitation. She never said how afraid she was that one day all of this might suddenly end, that one day, he might turn into nothing more than a memory. Her silence carried love, but within that love lived fear—fear that if she spoke her heart, he might not understand. Fear that her words might become a burden. Fear of losing him—even though she had never truly had him. And so, she chose silence, because sometimes silence feels safer, even when it slowly breaks you from within. She never cried in front of him. She never showed that she was hurting. But at night, when everything fell quiet, her unsaid words spilled out through her eyes. She buried her face in her pillow and cried for all the things she never had the courage to say. She questioned herself—whether she had done the right thing, whether staying silent was truly better, or whether she should have said everything once, regardless of the outcome. The words she never spoke were not just about love—they were her exhaustion, her hopes, her fears, her quiet longings to be understood without having to explain herself. Yet she knew that not everyone understands without words. Still, she kept those words locked inside her heart, because sometimes the things that matter the most are the hardest to say. And so, she continued walking through life carrying an entire story within her—a story that was never spoken, but felt in every breath. That story remained alive in her heart, even though it never found its way into words.</p>
+<p>The words inside her were not just unsaid — they were suppressed, as if someone had placed a heavy stone on her heart. Everyday she sat in front of him, smiled, tried to appear normal, while something inside her kept breaking again and again. She wanted to tell him that his silence was killing her, that his way of pretending not to notice wounded her deeply. She wanted him to know that she was losing herself a little everyday, just so he could remain. But she said nothing, because she feared that if she gave her pain a voice, he might walk away forever. Every night she went to sleep with the regret that she never spoke up to protect herself, and in trying to protect him, she lost herself.</p>
+<p>There was a lot in her heart, but she never learned to make noise about it. She kept her emotions carefully, like something fragile that could break with the slightest carelessness. She knew that not everything needs to be said, and not every feeling needs a voice. She loved in silence, she stayed without announcing it. It mattered to her, but she never let that matter turn into complaint. She accepted that some relationships do not survive on words, but on presence alone—even if that presence remains incomplete.</p>
+<p>Inside her were not words, but seasons—sometimes still, sometimes pouring. She watched him everyday, and each time she gathered herself before speaking. She wanted to tell him that she found herself in his voice, that a single glimpse of him became the light of her entire day. But she locked her words inside the cupboards of her heart, because some emotions become ordinary once they are spoken. She wished he would understand her without her having to say anything—and in that wish, she remained silent.</p>
+<p>And in the end, nothing truly reached completion—only silence remained. She said everything, yet said nothing at all, and he understood everything, yet understood nothing. What existed between them never became a relationship, yet that bond stayed alive every single day. There were no promises—yet there was waiting. A kind of waiting that carries no hope of return, only turns into a habit.</p>
+<p>She learned that not every love reaches its destination. Some loves pause along the way—at a turn, at a fear, at an unfinished courage. She could not let him go, and he could not make her his. Both chose their own silence, and within the silence, an entire story was buried.</p>
+<p>Sometimes a thought still passed through her — if only I had asked. Sometimes a thought still passed through him — if only I had spoken. But even those thoughts no longer hurt; they just existed. Or these &quot;if only&quot; are their greatest truth. Life continued, separately, as it always does. Yet somewhere inside, a page stayed open — not demanding to be written, not asking to be torn away. It stayed, quietly, like something accepted.</p>
+<p>They moved forward into separate lives, yet somewhere inside, one unfinished page remained open. A page that can neither be torn away nor fully written. It only rustles sometimes with the wind,</p>
+<p>To remind them —</p>
+<p>that some stories remain unfinished because they have already been completed in the heart.</p>
+<p>And perhaps that was their ending —</p>
+<p>Not together,</p>
+<p>not apart,</p>
+<p>just a feeling....</p>
+<p>that stayed in the heart,</p>
+<p>but not in life.</p>
+<p>Pehli baar joh tujhse ki woh baat yaad hai,</p>
+<p>Teri yaad mein joh guzaari woh raat yaad hai,</p>
+<p>yaad hai mujhe teri woh jheel si aankhein, phool se bhi khoobsurat tere woh haath yaad hai,</p>
+<p>yaad hai mujhe woh baat karte-karte so jana, Dur hote huye bhi ek dusre mein kho jaana,</p>
+<p>yaad hai mujhe aaj bhi woh sab tere nakhre,</p>
+<p>Mujhse Baat Na hone pe tera khana Na khana,</p>
+<p>Kaise kiya tha maine tujhse ijhaar yaad hai,</p>
+<p>Har pal kiya joh tera woh intezaar yaad hai,</p>
+<p>Haan, shayad Mein tujhe bhool gayi hoon</p>
+<p>Magar, Mujhe aaj bhi humara woh, pyaar yaad hai..</p>
+<p>And if our love was meant to remain unfinished, then let these pages be its ending.</p>
+<p>With love, always.</p></div>
+      </article>
+    
+    </section>
+  </div>
+</main>
+
+<section class="author" id="author">
+  <div class="wrap grid">
+    <div><div class="label">About the author</div></div>
+    <div>
+      <h2>Bharti</h2>
+      <p class="lead">She never planned to become a writer. She simply had too many feelings and nowhere left to keep them.</p>
+      <p>Every page of <em>Living With Unfinished Love</em> is a quiet reflection of her journey—of loving deeply, losing silently, and learning that some people leave without ever truly leaving our hearts.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div>Living With Unfinished Love — Bharti</div>
+  <div style="margin-top:8px">Some stories remain unfinished because they have already been completed in the heart.</div>
+</footer>
+
+<script>
+const progress = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  progress.style.width = (max ? (scrollY / max) * 100 : 0) + '%';
+});
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const el = document.querySelector(a.getAttribute('href'));
+    if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+</script>
+</body>
+</html>
